@@ -200,6 +200,45 @@
         Después, a <strong>$a</strong> se le asignó el valor: "9E3", que representa <strong>9000</strong> en notación científica (lo investigué)
         y es por eso que se tuvo que convertir este valor a double, para que al final, <strong>$c</strong> se conviertiera en <strong>9000.0</strong>.
     </p>
-    
+
+    <h2>Ejercicio 6</h2>
+    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas usando la función var_dump(<datos>).</p>
+    <p>Después investiga una función de PHP que permita transformar el valor booleano de $c y $e en uno que se pueda mostrar con un echo:</p>
+    <p>$a = “0”; $b = “TRUE”; $c = FALSE; $d = ($a OR $b); $e = ($a AND $c); $f = ($a XOR $b);</p>
+    <?php
+    // Asignación de valores iniciales
+    $a = "0";
+    $b = "TRUE";
+    $c = FALSE;
+    $d = ($a OR $b);
+    $e = ($a AND $c);
+    $f = ($a XOR $b);
+
+    // Mostrar los valores usando var_dump()
+    echo "<h4>Valores usando var_dump()</h4>";
+    echo "<p>Valor de \$a: "; var_dump($a); echo "</p>";
+    echo "<p>Valor de \$b: "; var_dump($b); echo "</p>";
+    echo "<p>Valor de \$c: "; var_dump($c); echo "</p>";
+    echo "<p>Valor de \$d: "; var_dump($d); echo "</p>";
+    echo "<p>Valor de \$e: "; var_dump($e); echo "</p>";
+    echo "<p>Valor de \$f: "; var_dump($f); echo "</p>";
+
+    // Conversion de valores booleanos $c y $e para poder mostrarlos con echo
+    echo "<h4>Conversión de valores booleanos para poder mostrarlos con echo</h4>";
+
+    // Función intval() para convertir booleanos a enteros
+
+    echo "<p>Valor de \$c convertido a entero (con intval): " . intval($c) . "</p>";
+    echo "<p>Valor de \$e convertido a entero (con intval): " . intval($e) . "</p>";
+    // Liberar variables
+    unset($a, $b, $c, $d, $e, $f);
+    ?>
+    <h3>Explicación:</h3>
+    <p>La función <strong>var_dump()</strong> muestra información estructurada sobre una o más expresiones incluyendo su tipo y valor.</p>
+    <p> Para convertir <strong>$c</strong> y <strong>$e</strong> de booleanos a un formato que se pudiera mostrar con echo, se optó
+        por usar <strong>intval()</strong>, para convertirlos  a enteros (0 para false y 1 para true).
+    </p>
+
+
 </body>
 </html>
