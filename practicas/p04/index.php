@@ -84,6 +84,57 @@
     // Liberar variables
     unset($a, $b, $c);
     ?>
+
+<h2>Ejercicio 3</h2>
+    <p>Muestra el contenido de cada variable inmediatamente después de cada asignación, verificar la evolución del tipo de estas variables (imprime todos los componentes de los arreglos):</p>
+    <p>$a = “PHP5”; $z[] = &$a; $b = “5a version de PHP”; $c = $b*10; $a .= $b; $b *= $c; $z[0] = “MySQL”;</p>
+    <?php
+    // Inicialización de las variables
+    $a = "PHP5";
+    echo "<p>Asignación inicial: \$a = 'PHP5'</p>";
+    echo "<p>Valor de \$a: $a</p>";
+
+    // Referencia de $a al arreglo de $z
+    $z[] = &$a;
+    echo "<p>Asignación: \$z[] = &\$a</p>";
+    echo "<p>Contenido de \$z: "; print_r($z); echo "</p>";
+
+    // Asignación de $b
+    $b = "5a version de PHP";
+    echo "<p>Asignación: \$b = '5a version de PHP'</p>";
+    echo "<p>Valor de \$b: $b</p>";
+
+    // Multiplicación en $c = $b * 10
+    $c = (int) $b * 10; //Se extrae sólo la parte númerica de b porque marcaba error
+    echo "<p>Asignación: \$c = \$b * 10</p>";
+    echo "<p>Valor de \$c: $c</p>";
+
+    // Asignación de $a .= $b
+    $a .= $b;
+    echo "<p>Asignación: \$a .= \$b</p>";
+    echo "<p>Valor de \$a: $a</p>";
+    echo "<p>Contenido actualizado de \$z (referencia a \$a): "; print_r($z); echo "</p>";
+
+    // Multiplicación de $b *= $c
+    $b = (int) $b * $c;
+    echo "<p>Asignación: \$b *= \$c</p>";
+    echo "<p>Valor de \$b: $b</p>";
+
+    // Modificación de $z[0] = "MySQL"
+    $z[0] = "MySQL";
+    echo "<p>Asignación: \$z[0] = 'MySQL'</p>";
+    echo "<p>Actualización del contenido de \$z: "; print_r($z); echo "</p>";
+    echo "<p>Valor final de \$a: $a</p>";
+    // Liberar variables
+    unset($a, $b, $c, $z);
+    ?>
+
+    <h3>Explicación:</h3>
+    <p>
+        Al asignar una referencia de <strong>$a</strong> a <strong>$z[0]</strong>, cualquier modificación en <strong>$a</strong> se reflejará en <strong>$z[0]</strong>, 
+        cuando se modifica el valor de <strong>$a</strong> asignando <strong>$b</strong> ($a .= $b), el cambio también aparece en <strong>$z[0]</strong> debido a la referencia. 
+        Pero cuando le asignamos un nuevo valor a <strong>$z[0]</strong> ("MySQL"), la referencia se ve afectada y <strong>$a</strong> ya no se modifica cuando hay cambios en <strong>$z[0]</strong>.
+    </p>
     
 </body>
 </html>
