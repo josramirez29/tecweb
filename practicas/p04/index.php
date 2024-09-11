@@ -239,6 +239,34 @@
         por usar <strong>intval()</strong>, para convertirlos  a enteros (0 para false y 1 para true).
     </p>
 
+    <h2>Ejercicio 7</h2>
+    <p>Usando la variable predefinida $_SERVER, determina lo siguiente:</p>
+    <p>a. La versión de Apache y PHP.</p>
+    <p>b. El nombre del sistema operativo (servidor).</p>
+    <p>c. El idioma del navegador (cliente).</p>
+
+    <?php
+    // a) Versión de Apache y PHP
+    $apache_version = $_SERVER['SERVER_SOFTWARE'];
+    $php_version = phpversion();
+
+    // b) Nombre del sistema operativo del servidor
+    $server_os = PHP_OS;
+
+    // c) Idioma del navegador (cliente)
+    $client_language = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+
+    // Mostrar los resultados
+    echo "<ul>";
+    echo "<li>Versión de Apache: $apache_version</li>";
+    echo "<li>Versión de PHP: $php_version</li>";
+    echo "<li>Sistema operativo del servidor: $server_os</li>";
+    echo "<li>Idioma del navegador (cliente): $client_language</li>";
+    echo "</ul>";
+
+    // Liberar variables
+    unset($apache_version, $php_version, $server_os, $client_language);
+    ?>
 
 </body>
 </html>
