@@ -167,6 +167,39 @@
         En este ejercicio, se utilizó $GLOBALS para recuperar las variables <strong>$a</strong>, <strong>$b</strong>, <strong>$c</strong> y el arreglo <strong>$z</strong> de la matriz global, esto nos permite ver sus valores actuales.
     </p>
 
+    <h2>Ejercicio 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+    <p>$a = “7 personas”; $b = (integer) $a; $a = “9E3”; $c = (double) $a;</p>
+    <?php
+    // Asignación inicial
+    $a = "7 personas";
+    echo "<p>Asignación inicial: \$a = '7 personas'</p>";
+    echo "<p>Valor de \$a: $a</p>";
+
+    // Conversión a entero de la variable $a para asignarla a $b
+    $b = (integer) $a;
+    echo "<p>Conversión de \$a a entero: \$b = \$a</p>";
+    echo "<p>Valor de \$b: $b</p>"; // Valor de $b ya convertido en entero
+
+    // Asignación de $a nueva
+    $a = "9E3";
+    echo "<p>Asignación: \$a = '9E3'</p>";
+    echo "<p>Valor de \$a: $a</p>";
+
+    // Conversión de $a a double
+    $c = (double) $a;
+    echo "<p>Conversión de \$a a double: \$c = \$a</p>";
+    echo "<p>Valor de \$c: $c</p>"; // Muestra el valor convertido a double
+    // Liberar variables
+    unset($a, $b, $c);
+    ?>
+
+    <h3>Explicación:</h3>
+    <p>
+        La variable <strong>$a</strong> inicialmente tenía el valor: "7 personas", pero al convertirla a entero, sólo se toma en cuenta el <strong>7</strong> y se ignora el texto, por lo que a <strong>$b</strong> se le asignó el valor de <strong>7</strong>.
+        Después, a <strong>$a</strong> se le asignó el valor: "9E3", que representa <strong>9000</strong> en notación científica (lo investigué)
+        y es por eso que se tuvo que convertir este valor a double, para que al final, <strong>$c</strong> se conviertiera en <strong>9000.0</strong>.
+    </p>
     
 </body>
 </html>
