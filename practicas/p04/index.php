@@ -135,6 +135,38 @@
         cuando se modifica el valor de <strong>$a</strong> asignando <strong>$b</strong> ($a .= $b), el cambio también aparece en <strong>$z[0]</strong> debido a la referencia. 
         Pero cuando le asignamos un nuevo valor a <strong>$z[0]</strong> ("MySQL"), la referencia se ve afectada y <strong>$a</strong> ya no se modifica cuando hay cambios en <strong>$z[0]</strong>.
     </p>
+
+    <h2>Ejercicio 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior, pero ahora con la ayuda de la matriz $GLOBALS o del modificador global de PHP.</p>
+    <?php
+    // Definir las variables globales
+    global $a, $b, $c, $z;
+
+    // Asignaciones (de los ejercicios anteriores)
+    //Es necesario que las variables estén declaradas en el ámbito global si no no funcionaba y marcaba error.
+    $a = "PHP5";
+    $z[] = &$a;
+    $b = "5a version de PHP";
+    $c = (int) $b * 10;
+    $a .= $b;
+    $b = (int) $b * $c;
+    $z[0] = "MySQL";
+    // Mostrar los valores de las variables utilizando $GLOBALS
+    echo '<ul>';
+    echo "<li>Valor de \$a (en el ámbito global): " . $GLOBALS['a'] . "</li>";
+    echo "<li>Valor de \$b (en el ámbito global): " . $GLOBALS['b'] . "</li>";
+    echo "<li>Valor de \$c (en el ámbito global): " . $GLOBALS['c'] . "</li>";
+    echo "<li>Contenido del arreglo \$z (en el ámbito global): "; print_r($GLOBALS['z']); echo "</li>";
+    echo '</ul>';
+    // Liberar variables
+    unset($GLOBALS['a'], $GLOBALS['b'], $GLOBALS['c'], $GLOBALS['z']);
+    ?>
+    <h3>Explicación:</h3>
+    <p>
+        Utilizando <strong>$GLOBALS</strong>, es posible acceder a cualquier variable global dentro del script. Es decir, contiene una referencia a cada variable disponible en el espectro de las variables del script.
+        En este ejercicio, se utilizó $GLOBALS para recuperar las variables <strong>$a</strong>, <strong>$b</strong>, <strong>$c</strong> y el arreglo <strong>$z</strong> de la matriz global, esto nos permite ver sus valores actuales.
+    </p>
+
     
 </body>
 </html>
