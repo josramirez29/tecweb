@@ -105,7 +105,7 @@
     echo "<p>Valor de \$b: $b</p>";
 
     // Multiplicación en $c = $b * 10
-    $c = (int) $b * 10; //Se extrae sólo la parte númerica de b porque marcaba error
+    @$c = $b * 10; //Opción 1: PHP toma el valor aproximado (más cercano), en este caso 5
     echo "<p>Asignación: \$c = \$b * 10</p>";
     echo "<p>Valor de \$c: $c</p>";
 
@@ -116,7 +116,7 @@
     echo "<p>Contenido actualizado de \$z (referencia a \$a): "; print_r($z); echo "</p>";
 
     // Multiplicación de $b *= $c
-    $b = (int) $b * $c;
+    $b = (int) $b * $c; //Opción 2: Se extrae sólo la parte númerica de b porque marcaba error
     echo "<p>Asignación: \$b *= \$c</p>";
     echo "<p>Valor de \$b: $b</p>";
 
