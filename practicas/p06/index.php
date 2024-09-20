@@ -111,5 +111,32 @@ if(isset($_POST["numero"]))
 ?>
 </fieldset>
 
+<h2>Ejercicio 4</h2>
+    <p>Crear un arreglo cuyos índices van de 97 a 122 y cuyos valores son las letras de la ‘a’
+    a la ‘z’. Usa la función chr(n) que devuelve el caracter cuyo código ASCII es n para poner
+    el valor en cada índice.</p>
+
+<?php
+// Crear el arreglo con índices de 97 a 122, y valores correspondientes a las letras
+$arreglo = array();
+for ($i = 97; $i <= 122; $i++) {
+    $arreglo[$i] = chr($i);
+}
+
+// Mostrar el arreglo en una tabla utilizando foreach
+echo "<table border='1'>";
+echo "<tr><th>Índice</th><th>Valor</th></tr>";
+
+foreach ($arreglo as $key => $value) {
+    echo "<tr>";
+    echo "<td>$key</td>";
+    echo "<td>$value</td>";
+    echo "</tr>";
+}
+
+echo "</table>";
+?>
+
+
 </body>
 </html>
