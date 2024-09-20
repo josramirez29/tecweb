@@ -92,4 +92,18 @@
     }
 
     echo "</table>";
+
+    if (isset($_POST["edad"]) && isset($_POST["sexo"])) {
+        $edad = intval($_POST["edad"]);
+        $sexo = $_POST["sexo"];
+    
+        // Validación
+        if ($sexo == "femenino" && $edad >= 18 && $edad <= 35) {
+            echo "<p>Bienvenida, usted está en el rango de edad permitido.</p>";
+        } else {
+            echo "<p>Error: No cumple con los criterios requeridos.</p>";
+        }
+    } else {
+        echo "<p>Por favor, complete todos los campos del formulario.</p>";
+    }
 ?>

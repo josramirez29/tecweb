@@ -137,6 +137,37 @@ foreach ($arreglo as $key => $value) {
 echo "</table>";
 ?>
 
+<h2>Ejercicio 5</h2>
+    <p>Usar las variables $edad y $sexo en una instrucción if para identificar una persona de
+    sexo “femenino”, cuya edad oscile entre los 18 y 35 años y mostrar un mensaje de
+    bienvenida apropiado.</p>
+
+<fieldset>
+<legend>Formulario de Edad y Sexo</legend>
+<form action="http://localhost/tecweb/practicas/p06/index.php" method="post">
+    Edad: <input type="number" name="edad" required><br>
+    Sexo: 
+    <input type="radio" name="sexo" value="femenino" required> Femenino
+    <input type="radio" name="sexo" value="masculino" required> Masculino<br>
+    <input type="submit" value="Enviar">
+</form>
+
+<?php
+if (isset($_POST["edad"]) && isset($_POST["sexo"])) {
+    $edad = intval($_POST["edad"]);
+    $sexo = $_POST["sexo"];
+
+    // Validación
+    if ($sexo == "femenino" && $edad >= 18 && $edad <= 35) {
+        echo "<p>Bienvenida, usted está en el rango de edad permitido.</p>";
+    } else {
+        echo "<p>Error: No cumple con los criterios requeridos.</p>";
+    }
+} else {
+    echo "<p>Por favor, complete todos los campos del formulario.</p>";
+}
+?>
+
 
 </body>
 </html>
