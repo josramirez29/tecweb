@@ -65,5 +65,51 @@
     $matriz = array();
     ?>
 
+<h2>Ejercicio 3</h2>
+    <p>Utiliza un ciclo while para encontrar el primer número entero obtenido aleatoriamente,
+    pero que además sea múltiplo de un número dado.</p>
+    <ul>
+        <li>Crear una variante de este script utilizando el ciclo do-while.</li>
+        <li>El número dado se debe obtener vía GET.</li>
+    </ul>
+<fieldset>
+<legend>Número a comprobar</legend>
+<form action="http://localhost/tecweb/practicas/p06/index.php" method="post">
+    Número: <input type="text" name="numero"><br>
+    <input type="submit">
+</form>
+<br>
+<?php
+if(isset($_POST["numero"]))
+{
+    echo "Número dado: " . $_POST["numero"] . '<br>';
+
+    // Validación de que el número dado es un entero
+    if(is_numeric($_POST["numero"]) && intval($_POST["numero"]) > 0) {
+        $numeroDado = intval($_POST["numero"]);
+
+        // Ciclo while
+        $encontrado = false;
+        while (!$encontrado) {
+            $aleatorio = rand(1, 100);
+            if ($aleatorio % $numeroDado == 0) {
+                echo "Número encontrado con while: $aleatorio es múltiplo de $numeroDado<br>";
+                $encontrado = true;
+            }
+        }
+
+        // Ciclo do-while
+        do {
+            $aleatorio = rand(1, 100);
+        } while ($aleatorio % $numeroDado != 0);
+
+        echo "Número encontrado con do-while: $aleatorio es múltiplo de $numeroDado";
+    } else {
+        echo "Por favor, ingresa un número entero válido.";
+    }
+}
+?>
+</fieldset>
+
 </body>
 </html>

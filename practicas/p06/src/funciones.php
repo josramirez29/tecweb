@@ -46,5 +46,32 @@
         echo "Número de iteraciones: $iteraciones <br>";
         echo "Cantidad de números generados: $numeros";
         $matriz = array();
-
+        if(isset($_POST["numero"]))
+        {
+            echo "Número dado: " . $_POST["numero"] . '<br>';
+        
+            // Validación de que el número dado es un entero
+            if(is_numeric($_POST["numero"]) && intval($_POST["numero"]) > 0) {
+                $numeroDado = intval($_POST["numero"]);
+        
+                // Ciclo while
+                $encontrado = false;
+                while (!$encontrado) {
+                    $aleatorio = rand(1, 100);
+                    if ($aleatorio % $numeroDado == 0) {
+                        echo "Número encontrado con while: $aleatorio es múltiplo de $numeroDado<br>";
+                        $encontrado = true;
+                    }
+                }
+        
+                // Ciclo do-while
+                do {
+                    $aleatorio = rand(1, 100);
+                } while ($aleatorio % $numeroDado != 0);
+        
+                echo "Número encontrado con do-while: $aleatorio es múltiplo de $numeroDado";
+            } else {
+                echo "Por favor, ingresa un número entero válido.";
+            }
+        }
 ?>
