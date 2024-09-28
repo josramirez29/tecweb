@@ -4,8 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Práctica 4 - Variables en PHP</title>
 </head>
-<h1>Práctica 4 - Variables en PHP</h1>
 <body>
+<h1>Práctica 4 - Variables en PHP</h1>
 <h2>Ejercicio 1</h2>
     <p>Determina cuál de las siguientes variables son válidas y explica por qué:</p>
     <p>$_myvar,  $_7var,  myvar,  $myvar,  $var7,  $_element1, $house*5</p>
@@ -46,7 +46,7 @@
 
     <h2>Ejercicio 2</h2>
     <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
-    <p>$a = “ManejadorSQL”; $b = 'MySQL’; $c = &$a;</p>
+    <p>$a = “ManejadorSQL”; $b = 'MySQL’; $c = &amp;$a;</p>
     <h3>Bloque 1: Asignaciones Iniciales</h3>
     <h4>a-Asignaciones Iniciales</h4>
     <?php
@@ -87,7 +87,7 @@
 
 <h2>Ejercicio 3</h2>
     <p>Muestra el contenido de cada variable inmediatamente después de cada asignación, verificar la evolución del tipo de estas variables (imprime todos los componentes de los arreglos):</p>
-    <p>$a = “PHP5”; $z[] = &$a; $b = “5a version de PHP”; $c = $b*10; $a .= $b; $b *= $c; $z[0] = “MySQL”;</p>
+    <p>$a = "PHP5"; $z[] = &amp;$a; $b = "5a version de PHP"; $c = $b*10; $a .= $b;</p>
     <?php
     // Inicialización de las variables
     $a = "PHP5";
@@ -202,7 +202,7 @@
     </p>
 
     <h2>Ejercicio 6</h2>
-    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas usando la función var_dump(<datos>).</p>
+    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas usando la función var_dump(<span>datos</span>).</p>
     <p>Después investiga una función de PHP que permita transformar el valor booleano de $c y $e en uno que se pueda mostrar con un echo:</p>
     <p>$a = “0”; $b = “TRUE”; $c = FALSE; $d = ($a OR $b); $e = ($a AND $c); $f = ($a XOR $b);</p>
     <?php
@@ -267,6 +267,9 @@
     // Liberar variables
     unset($apache_version, $php_version, $server_os, $client_language);
     ?>
-
+    <p>
+        <a href="https://validator.w3.org/markup/check?uri=referer"><img
+        src="https://www.w3.org/Icons/valid-xhtml11" alt="XHTML 1.1 válido" height="31" width="88" /></a>
+    </p>
 </body>
 </html>
