@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <title>Registro de productos</title>
+    <style type="text/css">
+        ol, ul { 
+            list-style-type: none;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>Registro de productos en la tienda</h1>
+
+    <p>Completa el siguiente formulario para agregar un nuevo producto a la base de datos.<br><br>Por favor, proporciona los detalles solicitados.</p>
+
+    <form action="set_producto_v2.php" method="POST">
+    
+        <h2>Información del Producto</h2>
+        <fieldset>
+            <legend>Detalles del Producto</legend>
+            <ul>
+                <li>Nombre del Producto: <input type="text" name="nombre" required></li>
+                <li>Modelo: <input type="text" name="modelo" required></li>
+                <li>Marca: <input type="text" name="marca" required></li>
+                <li>Precio: <input type="number" name="precio" step="0.01" required></li>
+                <li>Cantidad: <input type="number" name="cantidad" required></li>
+                <li>Detalles: <textarea name="detalles" rows="4" cols="50" placeholder="Especificaciones del producto" required></textarea></li>
+                <li>Imagen URL: <input type="text" name="imagen" placeholder="img/imagen.png" required></li>
+            </ul>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Registrar Producto">
+            <input type="reset" value="Restablecer">
+        </p>      
+    </form>
+
+  </body>
+</html>
