@@ -26,7 +26,7 @@ if ($row['total'] > 0) {
     echo 'El producto ya existe en la base de datos.';
 } else {
     $sql = "INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen, eliminado) 
-            VALUES ('{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}', 0)";
+        VALUES ('{$nombre}', '{$marca}', '{$modelo}', {$precio}, '{$detalles}', {$unidades}, '{$imagen}', 0)";
 
     if ($link->query($sql)) {
         echo 'Producto insertado con ID: ' . $link->insert_id;
