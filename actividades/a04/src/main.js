@@ -30,7 +30,7 @@ function ejemplo2() {
 function ejemplo3() {
     var nombre = prompt('Ingresa tu nombre:', '');
     var edad = prompt('Ingresa tu edad:', '');
-    
+
     var div1 = document.getElementById('nombre');
     div1.innerHTML = '<h3>Nombre: '+ nombre + '</h3>';
 
@@ -44,3 +44,16 @@ function ejemplo3() {
     document.write(' años.');
 }
 
+function ejemplo4() {
+    var valor1 = prompt('Introducir primer número:', '');
+    var valor2 = prompt('Introducir segundo número:', '');
+
+    var suma = parseInt(valor1) + parseInt(valor2);
+    var producto = parseInt(valor1) * parseInt(valor2);
+
+    document.write('La suma es ');
+    document.write(suma);
+    document.write('<br>');
+    document.write('El producto es ');
+    document.write(producto);
+}
