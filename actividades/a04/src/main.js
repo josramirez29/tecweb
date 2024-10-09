@@ -232,3 +232,19 @@ function ejemplo16() {
     valor2 = parseInt(valor2);
     procedimiento(valor1,valor2);
 }
+
+function convertirCastellano(x) {
+    if (x === 1) return "Uno";
+    else if (x === 2) return "Dos";
+    else if (x === 3) return "Tres";
+    else if (x === 4) return "Cuatro";
+    else if (x === 5) return "Cinco";
+    else return "valor incorrecto";
+}
+
+function ejemplo17() {
+    var valor = prompt("Ingresa un valor entre 1 y 5", "");
+    valor = parseInt(valor);
+    var r = convertirCastellano(valor);
+    document.write(r);
+}
