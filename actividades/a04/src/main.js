@@ -211,3 +211,7 @@ function ejemplo14() {
     document.write("Ingresa tu documento correctamente<br>");
 }
 
+function ejemplo15() {
+    document.write("Cuidado<br>");
+    document.write("Ingresa tu documento correctamente<br>");
+}
