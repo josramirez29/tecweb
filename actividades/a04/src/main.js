@@ -27,3 +27,20 @@ function ejemplo2() {
     document.write( casado );
 }
 
+function ejemplo3() {
+    var nombre = prompt('Ingresa tu nombre:', '');
+    var edad = prompt('Ingresa tu edad:', '');
+    
+    var div1 = document.getElementById('nombre');
+    div1.innerHTML = '<h3>Nombre: '+ nombre + '</h3>';
+
+    var div2 = document.getElementById('edad');
+    div2.innerHTML = '<h3>Edad: '+ edad + '</h3>';
+
+    document.write('Hola ');
+    document.write(nombre);
+    document.write(', así que tienes ');
+    document.write(edad);
+    document.write(' años.');
+}
+
