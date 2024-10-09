@@ -215,3 +215,20 @@ function ejemplo15() {
     document.write("Cuidado<br>");
     document.write("Ingresa tu documento correctamente<br>");
 }
+
+
+function procedimiento(valor1,valor2) {
+    var inicio;
+    for(inicio=valor1; inicio<=valor2; inicio++) {
+    document.write(inicio+' ');
+}
+}
+
+function ejemplo16() {
+    var valor1,valor2;
+    valor1 = prompt('Ingresa el valor inferior:', '');
+    valor1 = parseInt(valor1);
+    valor2 = prompt('Ingresa el valor superior:', '');
+    valor2 = parseInt(valor2);
+    procedimiento(valor1,valor2);
+}
