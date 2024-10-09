@@ -80,3 +80,24 @@ function ejemplo6() {
         document.write('El mayor es ' + num2);
     }
 }
+
+function ejemplo7() {
+    var nota1 = prompt('Ingresa 1ra. nota:', '');
+    var nota2 = prompt('Ingresa 2da. nota:', '');
+    var nota3 = prompt('Ingresa 3ra. nota:', '');
+
+    // Convertimos los strings en enteros
+    nota1 = parseInt(nota1);
+    nota2 = parseInt(nota2);
+    nota3 = parseInt(nota3);
+
+    var pro = (nota1 + nota2 + nota3) / 3;
+
+    if (pro >= 7) {
+        document.write('Aprobado');
+    } else if (pro >= 4) {
+        document.write('Regular');
+    } else {
+        document.write('Reprobado');
+    }
+}
