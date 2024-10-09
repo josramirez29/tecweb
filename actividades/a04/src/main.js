@@ -101,3 +101,31 @@ function ejemplo7() {
         document.write('Reprobado');
     }
 }
+
+function ejemplo8() {
+    var valor = prompt('Ingresar un valor comprendido entre 1 y 5:', '');
+
+    // Convertimos a entero
+    valor = parseInt(valor);
+
+    switch (valor) {
+        case 1:
+            document.write('Uno');
+            break;
+        case 2:
+            document.write('Dos');
+            break;
+        case 3:
+            document.write('Tres');
+            break;
+        case 4:
+            document.write('Cuatro');
+            break;
+        case 5:
+            document.write('Cinco');
+            break;
+        default:
+            document.write('Debe ingresar un valor comprendido entre 1 y 5.');
+    }
+}
+
