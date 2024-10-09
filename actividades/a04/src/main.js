@@ -196,4 +196,8 @@ function ejemplo12() {
     } while (valor !== 0);
 }
 
-
+function ejemplo13() {
+    for (var f = 1; f <= 10; f++) {
+        document.write(f + " ");
+    }
+}
