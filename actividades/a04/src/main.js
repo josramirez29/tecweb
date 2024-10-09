@@ -66,3 +66,17 @@ function ejemplo5() {
         document.write(nombre + ' está aprobado con un ' + nota);
     }
 }
+
+function ejemplo6() {
+    var num1 = prompt('Ingresa el primer número:', '');
+    var num2 = prompt('Ingresa el segundo número:', '');
+
+    num1 = parseInt(num1);
+    num2 = parseInt(num2);
+
+    if (num1 > num2) {
+        document.write('El mayor es ' + num1);
+    } else {
+        document.write('El mayor es ' + num2);
+    }
+}
