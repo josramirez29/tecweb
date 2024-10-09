@@ -57,3 +57,12 @@ function ejemplo4() {
     document.write('El producto es ');
     document.write(producto);
 }
+
+function ejemplo5() {
+    var nombre = prompt('Ingresa tu nombre:', '');
+    var nota = prompt('Ingresa tu nota:', '');
+
+    if (nota >= 4) {
+        document.write(nombre + ' está aprobado con un ' + nota);
+    }
+}
