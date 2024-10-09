@@ -171,3 +171,29 @@ function ejemplo11() {
     document.write("La suma de los valores es " + suma + "<br>");
 }
 
+function ejemplo12() {
+    var valor;
+    do {
+        valor = prompt('Ingresa un valor entre 0 y 999:', '');
+        valor = parseInt(valor);
+        
+        if (!isNaN(valor)) {
+            document.write('El valor ' + valor + ' tiene ');
+
+            if (valor < 10) {
+                document.write('1 dígito');
+            } else if (valor < 100) {
+                document.write('2 dígitos');
+            } else {
+                document.write('3 dígitos');
+            }
+
+            document.write('<br>');
+        } else {
+            document.write('Por favor, ingresa un número válido.<br>');
+        }
+
+    } while (valor !== 0);
+}
+
+
