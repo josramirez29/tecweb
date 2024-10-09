@@ -248,3 +248,21 @@ function ejemplo17() {
     var r = convertirCastellano(valor);
     document.write(r);
 }
+
+function convertirCastellano2(x) {
+    switch (x) {
+        case 1: return "Uno";
+        case 2: return "Dos";
+        case 3: return "Tres";
+        case 4: return "Cuatro";
+        case 5: return "Cinco";
+        default: return "Valor incorrecto";
+    }
+}
+
+function ejemplo18() {
+    var valor = prompt("Ingresa un valor entre 1 y 5", "");
+    valor = parseInt(valor);
+    var r = convertirCastellano2(valor);
+    document.write(r);
+}
