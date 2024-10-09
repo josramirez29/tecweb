@@ -129,3 +129,30 @@ function ejemplo8() {
     }
 }
 
+function ejemplo9() {
+    var col = prompt('Ingresa el color con que quieras pintar el fondo de la ventana (rojo, verde, azul):', '');
+
+    switch (col) {
+        case 'rojo':
+            document.bgColor = '#ff0000';
+            break;
+        case 'verde':
+            document.bgColor = '#00ff00';
+            break;
+        case 'azul':
+            document.bgColor = '#0000ff';
+            break;
+        default:
+            document.write('Color no válido. Intenta con rojo, verde o azul.');
+    }
+}
+
+function ejemplo10() {
+    var x = 1;
+    while (x <= 100) {
+        document.write(x);
+        document.write('<br>');
+        x = x + 1;
+    }
+}
+
