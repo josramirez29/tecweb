@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
     <?php
-    // Verificar si el parámetro "tope" ha sido pasado vía GET
+    // Verificar si "tope" ha sido pasado con un GET
     if(isset($_GET['tope'])) {
         $tope = $_GET['tope'];
     }
 
-    // Si se ha proporcionado el parámetro "tope"
+    // Verificar si se ha proporcionado el parámetro "tope"
     if (!empty($tope))
     {
         // Se crea el objeto de conexión
@@ -71,8 +71,9 @@
                         <td><img src="img/<?= $row['imagen'] ?>" alt="Imagen del producto" style="width: 100px;"></td>
                         <!-- Nueva fila con el botón para modificar -->
                         <td>
-                            <button onclick="modificarProducto('<?= $row['id'] ?>', '<?= $row['nombre'] ?>', '<?= $row['marca'] ?>', '<?= $row['modelo'] ?>', '<?= $row['precio'] ?>', '<?= $row['unidades'] ?>', '<?= $row['detalles'] ?>', '<?= $row['imagen'] ?>')">Modificar</button>
-                        </td>
+    						<button onclick="modificarProducto('<?= $row['id'] ?>', '<?= $row['nombre'] ?>', '<?= $row['marca'] ?>', '<?= $row['modelo'] ?>', '<?= $row['precio'] ?>', '<?= $row['unidades'] ?>', '<?= $row['detalles'] ?>', '<?= $row['imagen'] ?>')">Modificar</button>
+						</td>
+
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -88,7 +89,7 @@
         
         <script>
             function modificarProducto(id, nombre, marca, modelo, precio, unidades, detalles, imagen) {
-                // Redirige al formulario de edición pasando los parámetros del producto
+                // Redirige al formulario pasándole los parámetros del producto
                 var urlForm = "formulario_productos_v2.html";
                 var queryString = `?id=${id}&nombre=${nombre}&marca=${marca}&modelo=${modelo}&precio=${precio}&unidades=${unidades}&detalles=${detalles}&imagen=${imagen}`;
                 window.location.href = urlForm + queryString;

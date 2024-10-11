@@ -63,7 +63,7 @@
 						<td><img src="img/<?= $row['imagen'] ?>" alt="Imagen del producto" style="width: 100px;"></td>
 						<!-- Nueva celda con el botón para modificar -->
 						<td>
-							<button onclick="modificarProducto('<?= $row['id'] ?>', '<?= $row['nombre'] ?>', '<?= $row['marca'] ?>', '<?= $row['modelo'] ?>', '<?= $row['precio'] ?>', '<?= $row['unidades'] ?>', '<?= $row['detalles'] ?>', '<?= $row['imagen'] ?>')">Modificar</button>
+    						<button onclick="modificarProducto('<?= $row['id'] ?>', '<?= $row['nombre'] ?>', '<?= $row['marca'] ?>', '<?= $row['modelo'] ?>', '<?= $row['precio'] ?>', '<?= $row['unidades'] ?>', '<?= $row['detalles'] ?>', '<?= $row['imagen'] ?>')">Modificar</button>
 						</td>
 					</tr>
 					<?php endforeach; ?>

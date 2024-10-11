@@ -14,6 +14,7 @@
         // Función para obtener los parámetros de la URL y rellenar el formulario
         function rellenarFormulario() {
             const urlParams = new URLSearchParams(window.location.search);
+            document.productoForm.id.value = urlParams.get('id') || '';
             document.productoForm.nombre.value = urlParams.get('nombre') || '';
             document.productoForm.marca.value = urlParams.get('marca') || '';
             document.productoForm.modelo.value = urlParams.get('modelo') || '';
@@ -35,6 +36,7 @@
     <form name="productoForm" onsubmit="return validarFormulario()" action="update_producto.php" method="post">
         <fieldset>
             <legend>Detalles del Producto</legend>
+            ID: <input type="text" name="id" /><br/>
             Nombre: <input type="text" name="nombre" /><br/>
             Marca: 
             <select name="marca">
