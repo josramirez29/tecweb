@@ -36,7 +36,7 @@
     <form name="productoForm" onsubmit="return validarFormulario()" action="update_producto.php" method="post">
         <fieldset>
             <legend>Detalles del Producto</legend>
-            ID: <input type="text" name="id" /><br/>
+            <input type="hidden" name="id" /><br/>
             Nombre: <input type="text" name="nombre" /><br/>
             Marca: 
             <select name="marca">
