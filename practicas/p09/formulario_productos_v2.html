@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Registro de productos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style type="text/css">
+        ol, ul { 
+            list-style-type: none;
+        }
+    </style>
+    <script src="./validacion.js"></script>
+    <script>
+        // Función para obtener los parámetros de la URL y rellenar el formulario
+        function rellenarFormulario() {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.productoForm.nombre.value = urlParams.get('nombre') || '';
+            document.productoForm.marca.value = urlParams.get('marca') || '';
+            document.productoForm.modelo.value = urlParams.get('modelo') || '';
+            document.productoForm.precio.value = urlParams.get('precio') || '';
+            document.productoForm.unidades.value = urlParams.get('unidades') || '';
+            document.productoForm.detalles.value = urlParams.get('detalles') || '';
+            document.productoForm.imagen.value = urlParams.get('imagen') || '';
+        }
+        window.onload = rellenarFormulario; // Llama a la función al cargar la página
+    </script>
+</head>
+
+<body>
+
+    <h1>REGISTRO DE PRODUCTOS</h1>
+
+    <p>Completa el siguiente formulario para agregar un nuevo producto a la base de datos.<br><br>Por favor, proporciona los detalles solicitados.</p>
+    
+    <form name="productoForm" onsubmit="return validarFormulario()" action="update_producto.php" method="post">
+        <fieldset>
+            <legend>Detalles del Producto</legend>
+            Nombre: <input type="text" name="nombre" /><br/>
+            Marca: 
+            <select name="marca">
+                <option value="">Seleccione una marca</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Apple">Apple</option>
+                <option value="LG">LG</option>
+                <option value="HP">HP</option>
+            </select><br/>
+            Modelo: <input type="text" name="modelo" /><br/>
+            Precio: <input type="text" name="precio" /><br/>
+            Unidades: <input type="number" name="unidades" /><br/>
+            Detalles: <textarea name="detalles"></textarea><br/>
+            Imagen: <input type="text" name="imagen" /><br/>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>  
+        </fieldset>  
+    </form>  
+</body>
+</html>
