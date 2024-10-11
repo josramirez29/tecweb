@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <title>Registro de productos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style type="text/css">
+        ol, ul { 
+            list-style-type: none;
+        }
+    </style>
+    <script src="./validacion.js"></script>
+  </head>
+
+  <body>
+
+    <h1>REGISTRO DE PRODUCTOS</h1>
+
+    <p>Completa el siguiente formulario para agregar un nuevo producto a la base de datos.<br><br>Por favor, proporciona los detalles solicitados.</p>
+    
+        <form name="productoForm" onsubmit="return validarFormulario()" action="update_producto.php" method="post">
+        <fieldset>
+            <legend>Detalles del Producto</legend>
+            Nombre: <input type="text" name="nombre" /><br/>
+            Marca: 
+            <select name="marca">
+                <option value="">Seleccione una marca</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Apple">Apple</option>
+                <option value="LG">LG</option>
+                <option value="HP">HP</option>
+            </select><br/>
+            Modelo: <input type="text" name="modelo" /><br/>
+            Precio: <input type="text" name="precio" /><br/>
+            Unidades: <input type="number" name="unidades" /><br/>
+            Detalles: <textarea name="detalles"></textarea><br/>
+            Imagen: <input type="text" name="imagen" /><br/>
+            <p>
+                <input type="submit" value="Enviar">
+            </p>  
+        </form>  
+    </fieldset>  
+  </body>
+</html>

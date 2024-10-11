@@ -68,7 +68,7 @@
 						<td><?= $row['modelo'] ?></td>
 						<td><?= $row['precio'] ?></td>
 						<td><?= $row['unidades'] ?></td>
-						<td><?= utf8_encode($row['detalles']) ?></td>
+						<td><?= ($row['detalles']) ?></td>
 						<td><img src="img/<?= $row['imagen'] ?>" alt="Imagen del producto" style="width: 100px;"></td>					
 					</tr>
 					<?php endforeach; ?>
