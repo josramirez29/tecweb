@@ -120,12 +120,28 @@ function agregarProducto(e) {
 
     // SE OBTIENE DESDE EL FORMULARIO EL JSON A ENVIAR
     var productoJsonString = document.getElementById('description').value;
+    
     // SE CONVIERTE EL JSON DE STRING A OBJETO
     var finalJSON = JSON.parse(productoJsonString);
     // SE AGREGA AL JSON EL NOMBRE DEL PRODUCTO
     finalJSON['nombre'] = document.getElementById('name').value;
+
+    // VALIDACIONES
+    if (!finalJSON.nombre) {
+        window.alert("El nombre del producto es obligatorio.");
+        return;
+    }
+    if (finalJSON.precio < 0) {
+        window.alert("El precio del producto no puede ser negativo.");
+        return;
+    }
+    if (finalJSON.unidades < 0) {
+        window.alert("Las unidades no pueden ser negativas.");
+        return;
+    }
+
     // SE OBTIENE EL STRING DEL JSON FINAL
-    productoJsonString = JSON.stringify(finalJSON,null,2);
+    productoJsonString = JSON.stringify(finalJSON, null, 2);
 
     // SE CREA EL OBJETO DE CONEXIÓN ASÍNCRONA AL SERVIDOR
     var client = getXMLHttpRequest();
@@ -134,10 +150,17 @@ function agregarProducto(e) {
     client.onreadystatechange = function () {
         // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
         if (client.readyState == 4 && client.status == 200) {
-            console.log(client.responseText);
+            // SE MUESTRA UNA ALERTA CON EL RESULTADO DE LA INSERCIÓN
+            window.alert(client.responseText);
+            restablecerFormulario();      // Restablecer el formulario
         }
     };
     client.send(productoJsonString);
+}
+
+function restablecerFormulario() {
+    document.getElementById('name').value = '';                 // Limpiar el campo de nombre
+    document.getElementById('description').value = JSON.stringify(baseJSON, null, 2);  // Restablecer el JSON
 }
 
 // SE CREA EL OBJETO DE CONEXIÓN COMPATIBLE CON EL NAVEGADOR
