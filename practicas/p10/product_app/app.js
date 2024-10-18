@@ -123,6 +123,7 @@ function agregarProducto(e) {
     
     // SE CONVIERTE EL JSON DE STRING A OBJETO
     var finalJSON = JSON.parse(productoJsonString);
+
     // SE AGREGA AL JSON EL NOMBRE DEL PRODUCTO
     finalJSON['nombre'] = document.getElementById('name').value;
 
@@ -131,12 +132,16 @@ function agregarProducto(e) {
         window.alert("El nombre del producto es obligatorio.");
         return;
     }
-    if (finalJSON.precio < 0) {
-        window.alert("El precio del producto no puede ser negativo.");
+    if (finalJSON.precio <= 99.99) {
+        window.alert("El precio del producto debe ser mayor a 99.99.");
         return;
     }
-    if (finalJSON.unidades < 0) {
-        window.alert("Las unidades no pueden ser negativas.");
+    if (!finalJSON.marca || finalJSON.marca === "NA") {
+        window.alert("La marca del producto es obligatoria y debe ser diferente a 'NA'.");
+        return;
+    }
+    if (!finalJSON.modelo || finalJSON.modelo === "XX-000") {
+        window.alert("El modelo del producto es obligatorio y debe ser diferente a 'XX-000'.");
         return;
     }
 
@@ -157,6 +162,7 @@ function agregarProducto(e) {
     };
     client.send(productoJsonString);
 }
+
 
 function restablecerFormulario() {
     document.getElementById('name').value = '';                 // Limpiar el campo de nombre
