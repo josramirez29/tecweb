@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    background: #1d7091;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 35px;
+    align-self: center;
+}
+
+nav form {
+    display: inline;
+}
+
+/*Estilo del formulario*/
+#task-form {
+    background: rgb(240, 240, 240);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#task-form input[type="text"],
+#task-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+}
+
+#task-form button {
+    background: #3299c2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-form button:hover {
+    background: #235177;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #f3f3f3;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+td {
+    padding: 10px;
+}
+
+td ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo de la lista de productos */
+#productos {
+    margin-top: 20px;
+}
