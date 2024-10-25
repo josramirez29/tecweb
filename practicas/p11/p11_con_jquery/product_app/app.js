@@ -58,3 +58,64 @@ $(document).ready(function() {
             }
         });
     }
+
+    //Función buscarProducto ()
+    $('#search').keyup(function(e) {
+        e.preventDefault();
+
+        // Obtener el valor de búsqueda usando jQuery
+        var search = $('#search').val(); 
+
+        //Solicitud AJAX
+        $.ajax({
+            url: './backend/product-search.php',
+            type: 'GET',
+            data: { search: search },
+            success: function(response) {
+                let productos = JSON.parse(response);
+
+                if (Object.keys(productos).length > 0) {
+                    let template = '';
+                    let template_bar = '';
+
+                    productos.forEach(producto => {
+                        let descripcion = `
+                            <li>precio: ${producto.precio}</li>
+                            <li>unidades: ${producto.unidades}</li>
+                            <li>modelo: ${producto.modelo}</li>
+                            <li>marca: ${producto.marca}</li>
+                            <li>detalles: ${producto.detalles}</li>
+                        `;
+
+                        template += `
+                            <tr productId="${producto.id}">
+                                <td>${producto.id}</td>
+                                <td>${producto.nombre}</td>
+                                <td><ul>${descripcion}</ul></td>
+                                <td>
+                                    <button class="product-delete btn btn-danger" data-id="${producto.id}">
+                                        Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        `;
+
+                        template_bar += `<li>${producto.nombre}</li>`;
+                    });
+
+                    document.getElementById("product-result").className = "card my-4 d-block";
+                    document.getElementById("container").innerHTML = template_bar;
+                    document.getElementById("products").innerHTML = template;
+                } else {
+                    // Si no se encuentran productos...
+                    document.getElementById("product-result").className = "card my-4 d-none";
+                    document.getElementById("container").innerHTML = ""; // Limpia la barra de estado
+                    document.getElementById("products").innerHTML = ""; // Limpia la tabla de productos
+                }
+            },
+            error: function() {
+                alert("Hubo un error al realizar la búsqueda.");
+            }
+        });
+    });
+});
