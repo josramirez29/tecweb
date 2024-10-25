@@ -19,6 +19,8 @@ function init() {
 
 $(document).ready(function() {
 
+    let edit = false;
+
     console.log('JQuery está trabajando!')
     listadoProductos();
 
@@ -164,7 +166,7 @@ $(document).ready(function() {
             finalJSON.imagen = 'img/default.png';  // Asigna una imagen por defecto
         }
 
-
+        let url = edit === false ? './backend/product-add.php' : './backend/product-edit.php';
 
         $.ajax({
             url: url,
@@ -218,5 +220,23 @@ $(document).ready(function() {
         }
     });
 
+    //Función editarProducto()
+    $(document).on('click', '.product-item', function() {
+        let id = $(this)[0].parentElement.parentElement.getAttribute('productid');
+        $.post('./backend/product-single.php', {id}, function(response){
+            const product = JSON.parse(response);
+            $('#name').val(product[0].nombre);
+            let productWithoutNameAndId = {...product[0]};
+            delete productWithoutNameAndId.nombre;
+            delete productWithoutNameAndId.id;
+            delete productWithoutNameAndId.eliminado;
+
+            $('#description').val(JSON.stringify(productWithoutNameAndId, null, 4));
+            edit = true;
+
+            $('#submit').text('Editar Producto');
+
+        })
+    });
 
 });
