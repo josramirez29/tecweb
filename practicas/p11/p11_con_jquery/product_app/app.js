@@ -193,4 +193,30 @@ $(document).ready(function() {
         });
     });
 
+    //Función eliminarProducto()
+    $(document).on('click', '.product-delete', function() {
+        if( confirm("¿Deseas eliminar este producto?") ) {
+            var id = event.target.parentElement.parentElement.getAttribute("productId");
+            $.ajax({
+                url: './backend/product-delete.php?id='+id,
+                type: 'GET',
+                data: {id},
+
+                success: function(response){
+                    let respuesta = JSON.parse(response);
+                    let template_bar = '';
+                    template_bar += `
+                                <li style="list-style: none;">status: ${respuesta.status}</li>
+                                <li style="list-style: none;">message: ${respuesta.message}</li>
+                            `;
+                    document.getElementById("product-result").className = "card my-4 d-block";
+                    document.getElementById("container").innerHTML = template_bar;
+
+                    listadoProductos();
+                }
+            });
+        }
+    });
+
+
 });
