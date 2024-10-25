@@ -118,4 +118,79 @@ $(document).ready(function() {
             }
         });
     });
+
+    //Función agregarProducto()
+    $('#product-form').submit(function(e) {
+        e.preventDefault();
+        var productoJsonString = document.getElementById('description').value;
+        var finalJSON = JSON.parse(productoJsonString);
+        finalJSON['nombre'] = document.getElementById('name').value;
+        productoJsonString = JSON.stringify(finalJSON, null, 2);
+
+        // Validación para el nombre del producto
+        if (!finalJSON.nombre || finalJSON.nombre.length == 0) {
+            alert('El nombre del producto es obligatorio');
+            return false;
+        }
+
+        // Validación para el modelo del producto
+        if (!finalJSON.modelo || finalJSON.modelo.length == 0) {
+            alert('El modelo es obligatorio');
+            return false;
+        }
+        if (!/^[a-zA-Z0-9 ]+$/.test(finalJSON.modelo) || finalJSON.modelo.length > 25) {
+            alert('El modelo tiene que ser alfanumérico y su extensión menor a 25 caracteres');
+            return false;
+        }
+
+        // Validación para el precio del producto
+        if (!finalJSON.precio || finalJSON.precio.length == 0) {
+            alert('El precio es obligatorio');
+            return false;
+        }
+        if (finalJSON.precio < 99.99) {
+            alert('El precio debe ser mayor a $99.99');
+            return false;
+        }
+
+        // Validación para los detalles del producto
+        if (finalJSON.detalles && finalJSON.detalles.length > 250) {
+            alert('Los detalles deben tener una extensión máxima de 250 caracteres');
+            return false;
+        }
+
+        // Validación para la imagen del producto
+        if (!finalJSON.imagen || finalJSON.imagen.length == 0) {
+            finalJSON.imagen = 'img/default.png';  // Asigna una imagen por defecto
+        }
+
+
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(finalJSON),
+
+            success: function(response) {
+                console.log(response);
+                let respuesta = JSON.parse(response);
+                let template_bar = '';
+                template_bar += `
+                            <li style="list-style: none;">status: ${respuesta.status}</li>
+                            <li style="list-style: none;">message: ${respuesta.message}</li>
+                        `;
+
+                document.getElementById("product-result").className = "card my-4 d-block";
+                document.getElementById("container").innerHTML = template_bar;
+
+                listadoProductos();
+                init();
+                edit = false;
+                $('#submit').text('Agregar Producto');
+                $('#name').val('');
+            }
+        });
+    });
+
 });
