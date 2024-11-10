@@ -3,18 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>ProductApp</title>
-    <!-- BOOTSTRAP 4  -->
     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
   </head>
   <body>
-
     <!-- BARRA DE NAVEGACIÓN  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href=".">ProductApp</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto"></ul>
           <form class="form-inline my-2 my-lg-0">
@@ -23,7 +20,6 @@
           </form>
       </div>
     </nav>
-
     <div class="container">
       <div class="row p-4">
         <div class="col-md-5">
@@ -32,29 +28,42 @@
               <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
               <form id="product-form">
                 <div class="form-group">
-                  <input class="form-control" type="text" id="name" placeholder="Nombre de producto">
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" id="description" cols="30" rows="10" placeholder="JSON de producto"></textarea>
+                    <input type="hidden" id="productId">
+                    <input class="form-control" type="text" name="nombre" id="form-name" placeholder="Nombre" oninput="validarNombre();">
+                    <br/>
+                    <select class="form-control" class="form-select" name="marca" id="form-brand" style="color: #818d98;" onblur="validarMarca();">
+                        <option value="" disabled selected>Selecciona una marca</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Apple">Apple</option>
+                        <option value="HP">HP</option>
+                        <option value="LG">LG</option>
+                    </select>
+                    <br/>
+                    <input class="form-control" type="text" name="modelo" id="form-model" placeholder="Modelo" onblur="validarModelo();">
+                    <br/>
+                    <input class="form-control" type="tel" name="precio" id="form-price" placeholder="Precio" onblur="validarPrecio();">
+                    <br/>
+                    <textarea class="form-control" name="detalles" rows="5" cols="30" id="form-details" placeholder="Detalles"></textarea>
+                    <br/>
+                    <input class="form-control" type="tel" name="unidades" id="form-units" placeholder="Unidades" onblur="validarUnidades();">
                 </div>
                 <input type="hidden" id="productId">
-                <button class="btn btn-primary btn-block text-center" type="submit">
+                <button class="btn btn-primary btn-block text-center" type="submit" id="submit-button">
                   Agregar Producto
                 </button>
               </form>
             </div>
           </div>
         </div>
-
+        
         <!-- TABLA  -->
         <div class="col-md-7">
-          <div class="card my-4" id="product-result">
+          <div class="card my-4 d-none" id="product-result">
             <div class="card-body">
               <!-- RESULTADO -->
               <ul id="container"></ul>
             </div>
           </div>
-
           <table class="table table-bordered table-sm">
             <thead>
               <tr>
@@ -68,12 +77,11 @@
         </div>
       </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <!-- Lógica del Frontend -->
     <script src="app.js"></script>
+    <!-- Archivo de Validaciones -->
+    <script src="validaciones.js"></script>
   </body>
-
 </html>
