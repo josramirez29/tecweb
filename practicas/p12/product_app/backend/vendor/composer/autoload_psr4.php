@@ -6,5 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'TECWEB\\MYAPI' => array($baseDir . '/myapi'),
+    'TECWEB\\MYAPI\\UPDATE\\' => array($baseDir . '/myapi/Update'),
+    'TECWEB\\MYAPI\\READ\\' => array($baseDir . '/myapi/Read'),
+    'TECWEB\\MYAPI\\DELETE\\' => array($baseDir . '/myapi/Delete'),
+    'TECWEB\\MYAPI\\CREATE\\' => array($baseDir . '/myapi/Create'),
+    'TECWEB\\MYAPI\\' => array($baseDir . '/myapi'),
 );

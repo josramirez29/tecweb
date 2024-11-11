@@ -1,7 +1,11 @@
 {
     "autoload": {
         "psr-4": {
-            "TECWEB\\MYAPI": "myapi/"
+            "TECWEB\\MYAPI\\": "myapi/",
+            "TECWEB\\MYAPI\\READ\\": "myapi/Read/",
+            "TECWEB\\MYAPI\\CREATE\\": "myapi/Create/",
+            "TECWEB\\MYAPI\\DELETE\\": "myapi/Delete/",
+            "TECWEB\\MYAPI\\UPDATE\\": "myapi/Update/"
         }
     }
 }
