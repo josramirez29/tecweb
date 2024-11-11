@@ -128,11 +128,6 @@ $(document).ready(function(){
         postData['nombre'] = $('#name').val();
         postData['id'] = $('#productId').val();
 
-        /**
-         * AQUÍ DEBES AGREGAR LAS VALIDACIONES DE LOS DATOS EN EL JSON
-         * --> EN CASO DE NO HABER ERRORES, SE ENVIAR EL PRODUCTO A AGREGAR
-         **/
-
         const url = edit === false ? './backend/product-add.php' : './backend/product-edit.php';
         
         $.post(url, postData, (response) => {
@@ -164,7 +159,7 @@ $(document).ready(function(){
             const element = $(this)[0].activeElement.parentElement.parentElement;
             const id = $(element).attr('productId');
             $.post('./backend/product-delete.php', {id}, (response) => {
-                $('#product-result').hide();
+            $('#product-result').show();
                 listarProductos();
             });
         }
@@ -188,7 +183,7 @@ $(document).ready(function(){
             let JsonString = JSON.stringify(product,null,2);
             // SE MUESTRA STRING EN EL <textarea>
             $('#description').val(JsonString);
-            
+            $('#submit').text('Editar Producto');
             // SE PONE LA BANDERA DE EDICIÓN EN true
             edit = true;
         });
