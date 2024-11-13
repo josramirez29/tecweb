@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogoVOD>
+    <cuenta>
+        <correo>joselynrali705@gmail.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>Hannah</usuario>
+                <idioma>English</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Jos</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>Romance</nombre>
+                <titulo>
+                    <nombre>El Diario de la Princesa</nombre>
+                    <duracion>115 minutos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>La Propuesta</nombre>
+                    <duracion>108 minutos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Love Rosie</nombre>
+                    <duracion>112 minutos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>10 cosas que odio de ti</nombre>
+                    <duracion>108 minutos</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Drama Literario</nombre>
+                <titulo>
+                    <nombre>Bajo la Misma Estrella</nombre>
+                    <duracion>128 minutos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Mujercitas</nombre>
+                    <duracion>135 minutos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Yo antes de ti</nombre>
+                    <duracion>120 minutos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Orgullo y Prejuicio</nombre>
+                    <duracion>130 minutos</duracion>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>Drama Adolescente</nombre>
+                <titulo>
+                    <nombre>Pretty Little Liars</nombre>
+                    <duracion>160 capítulos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Gossip Girl</nombre>
+                    <duracion>121 capítulos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Brigerton</nombre>
+                    <duracion>24 capítulos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Anne with an E</nombre>
+                    <duracion>26 capítulos</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Comedia</nombre>
+                <titulo>
+                    <nombre>Friends</nombre>
+                    <duracion>236 capítulos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Gilmore Girls</nombre>
+                    <duracion>153 capítulos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>How I met your mother</nombre>
+                    <duracion>208 capítulos</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Modern Family</nombre>
+                    <duracion>237 capítulos</duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogoVOD>
