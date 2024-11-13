@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogoVOD cuentaCorreo="joselynrali705@gmail.com">
+    <cuenta>
+        <perfil nombreUsuario="Hannah" idioma="English" />
+        <perfil nombreUsuario="Jos" idioma="Español" />
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Romance">
+                <titulo nombre="El Diario de la Princesa" duracion="115 minutos" />
+                <titulo nombre="La Propuesta" duracion="108 minutos" />
+                <titulo nombre="Love Rosie" duracion="112 minutos" />
+                <titulo nombre="10 cosas que odio de ti" duracion="108 minutos" />
+            </genero>
+            <genero nombre="Drama Literario">
+                <titulo nombre="Bajo la Misma Estrella" duracion="128 minutos" />
+                <titulo nombre="Mujercitas" duracion="135 minutos" />
+                <titulo nombre="Yo antes de ti" duracion="120 minutos" />
+                <titulo nombre="Orgullo y Prejuicio" duracion="130 minutos" />
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Drama Adolescente">
+                <titulo nombre="Pretty Little Liars" duracion="160 capítulos" />
+                <titulo nombre="Gossip Girl" duracion="121 capítulos" />
+                <titulo nombre="Bridgerton" duracion="24 capítulos" />
+                <titulo nombre="Anne with an E" duracion="26 capítulos" />
+            </genero>
+            <genero nombre="Comedia">
+                <titulo nombre="Friends" duracion="236 capítulos" />
+                <titulo nombre="Gilmore Girls" duracion="153 capítulos" />
+                <titulo nombre="How I Met Your Mother" duracion="208 capítulos" />
+                <titulo nombre="Modern Family" duracion="237 capítulos" />
+            </genero>
+        </programas>
+    </contenido>
+</catalogoVOD>
