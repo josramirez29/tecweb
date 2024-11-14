@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod_ep.dtd">
+<CatalogoVOD>
+    <cuenta correo="joselynrali705@gmail.com">
+        <perfiles>
+            <perfil usuario="Hannah" idioma="English"/>
+            <perfil usuario="Jos" idioma="Español" />
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="ESP">
+            <genero nombre="Romance">
+                <titulo duracion="112 minutos">A través de mi ventana</titulo>
+            </genero>
+        </peliculas>
+        <peliculas region="KOR">
+            <genero nombre="Romance">
+                <titulo duracion="106 minutos">Vidas Pasadas</titulo>
+            </genero>
+        </peliculas>
+        <peliculas region="USA"> 
+            <genero nombre="Romance">
+                <titulo duracion="115 minutos">El Diario de la Princesa</titulo>
+                <titulo duracion="108 minutos">La Propuesta</titulo>
+            </genero>
+            <genero nombre="Drama Literario">
+                <titulo duracion="128 minutos">Bajo la Misma Estrella</titulo>
+                <titulo duracion="135 minutos">Mujercitas</titulo>
+                <titulo duracion="120 minutos">Yo antes de ti</titulo>
+                <titulo duracion="130 minutos">Orgullo y Prejuicio</titulo>
+            </genero>
+        </peliculas>
+        <series region="ESP">
+            <genero nombre="Drama Adolescente">
+                <titulo duracion="112 minutos">Élite</titulo>
+            </genero>
+        </series>
+        <series region="MEX">
+            <genero nombre="Drama Adolescente">
+                <titulo duracion="112 minutos">Control Z</titulo>
+            </genero>
+        </series>
+        <series region="USA">
+            <genero nombre="Drama Adolescente">
+                <titulo duracion="160 capítulos">Pretty Little Liars</titulo>
+                <titulo duracion="24 capítulos">Bridgerton</titulo>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo duracion="236 capítulos">Friends</titulo>
+                <titulo duracion="153 capítulos">Gilmore Girls</titulo>
+                <titulo duracion="208 capítulos">How I Met Your Mother</titulo>
+                <titulo duracion="237 capítulos">Modern Family</titulo>
+            </genero>
+        </series>
+    </contenido>
+</CatalogoVOD>
