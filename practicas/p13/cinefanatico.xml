@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="1" visitas="5" puntos="35">
+        <nombre>Fernanda Robles Estrada</nombre>
+        <correo>fer.robles@gmail.com</correo>
+    </tarjeta>
+
+    <tarjeta noserie="2" visitas="9" puntos="63">
+        <nombre>Rodrigo Aguilar Martínez</nombre>
+        <correo>roy.aguilar27@hotmail.com</correo>
+        <telefono tipo="movil">2227074400</telefono>
+    </tarjeta>
+</cinefanatico>
