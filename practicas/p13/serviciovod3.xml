@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CatalogoVOD>
+    <cuenta correo="joselynrali705@gmail.com">
+        <perfiles>
+            <perfil usuario="Hannah" idioma="English"/>
+            <perfil usuario="Jos" idioma="Español" />
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Romance">
+                <titulo duracion="115 minutos">El Diario de la Princesa</titulo>
+                <titulo duracion="108 minutos">La Propuesta</titulo>
+                <titulo duracion="112 minutos">&lt;video id=&quot;11&quot;&gt;&amp;lt;&lt;/video&gt;</titulo>> <!-- Usando entidades predefinidas -->
+                <titulo duracion="108 minutos"><![CDATA[<video id="11">&lt;</video>]]></titulo> <!-- Usando CDATA -->
+            </genero>
+            <genero nombre="Drama Literario">
+                <titulo duracion="128 minutos">Bajo la Misma Estrella</titulo>
+                <titulo duracion="135 minutos">Mujercitas</titulo>
+                <titulo duracion="120 minutos">Yo antes de ti</titulo>
+                <titulo duracion="130 minutos">Orgullo y Prejuicio</titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Drama Adolescente">
+                <titulo duracion="160 capítulos">Pretty Little Liars</titulo>
+                <titulo duracion="121 capítulos">Gossip Girl</titulo>
+                <titulo duracion="24 capítulos">Bridgerton</titulo>
+                <titulo duracion="26 capítulos">Anne with an E</titulo>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo duracion="236 capítulos">Friends</titulo>
+                <titulo duracion="153 capítulos">Gilmore Girls</titulo>
+                <titulo duracion="208 capítulos">How I Met Your Mother</titulo>
+                <titulo duracion="237 capítulos">Modern Family</titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>
