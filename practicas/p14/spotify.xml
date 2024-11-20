@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Spotify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="spotify.xsd"
+    version="1.0">
+    <Cuenta id="1" plan="premium">
+        <Nombre>Spencer Hastings</Nombre>
+        <Correo>spencer.hastings@gmail.com</Correo>
+        <Telefono tipo="movil">2224655020</Telefono>
+    </Cuenta>
+    <Cuenta id="2" plan="free" fechaIni="2024-05-29" fechaFin="2024-06-29">
+        <Nombre>Joselyn Ramírez Lima</Nombre>
+        <Correo>joselynrali705@gmail.com</Correo>
+    </Cuenta>
+</Spotify>
