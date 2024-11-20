@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tw:Spotify xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tw="http://tecnologiasweb.com.mx"
+    xs:schemaLocation="http://tecnologiasweb.com.mx spotify_ns.xsd"
+    version="1.0">
+    <tw:Cuenta id="1" plan="premium">
+        <tw:Nombre>Spencer Hastings</tw:Nombre>
+        <tw:Correo>spencer.hastings@gmail.com</tw:Correo>
+        <tw:Telefono tipo="movil">2224655020</tw:Telefono>
+    </tw:Cuenta>
+    <tw:Cuenta id="2" plan="free" fechaIni="2024-05-29" fechaFin="2024-06-29">
+        <tw:Nombre>Joselyn Ramírez Lima</tw:Nombre>
+        <tw:Correo>joselynrali705@gmail.com</tw:Correo>
+    </tw:Cuenta>
+    <tw:Cuenta id="3" plan="free">
+        <tw:Nombre>Prueba</tw:Nombre>
+        <tw:Correo>prueba1@gmail.com</tw:Correo>
+        <tw:Telefono tipo="fijo">2222881657</tw:Telefono>
+    </tw:Cuenta>
+</tw:Spotify>
