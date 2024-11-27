@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "XSLT-compat">
+<html lang="es">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Catálogo VOD</title>
+      <style>
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f3e8ff;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            .principal {
+                background: linear-gradient(to right, #6a0dad, #9b59b6);
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            h1 {
+                color: #fff;
+                font-size: 3.5em;
+                margin: 0;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            h1 img {
+                width: 350px;
+                height: auto;
+                margin-right: 15px;
+            }
+
+            .perfiles {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px 0;
+            }
+
+            .perfil {
+                display: flex;
+                align-items: center;
+                background-color: #e9d6f3;
+                padding: 15px;
+                margin: 10px 0;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                width: 30%;
+            }
+
+            .perfil img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+
+            .perfil span {
+                font-size: 1.5em; 
+                text-align: center;
+                flex: 1; 
+            }
+
+            .bienvenida {
+                color: #ffffff;
+                font-size: 1.5em;
+                margin-top: 10px;
+                padding: 0 20px;
+            }
+
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                background-color: #fff;
+            }
+
+            th, td {
+                padding: 12px;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+                font-size: 1.2em;
+            }
+
+            th {
+                background-color: #8e44ad;
+                color: white;
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+                color: #8e44ad;
+                padding: 10px;
+                font-weight: bold;
+                background-color: #e9d6f3;
+                text-align: center;
+            }
+
+            tr:hover {
+                background-color: #f1e6ff;
+            }
+      </style>
+   </head>
+   <body>
+      <div class="principal">
+          <h1>
+               CATÁLOGO
+              <img src="img/hbo.svg" alt="Logo">
+          </h1>
+          <div class="bienvenida">Bienvenid@, a continuación se muestran las películas y series disponibles...</div>
+      </div>
+      <h2>Perfiles</h2>
+      <div class="perfiles">
+         <div class="perfil">
+            <img src="img/hannah.jpg" alt="Perfil de Hannah">
+            <span>Usuario: Hannah (Idioma: English)</span>
+         </div>
+         <div class="perfil">
+            <img src="img/jos.jpg" alt="Perfil de Jos">
+            <span>Usuario: Jos (Idioma: Español)</span>
+         </div>
+      </div>
+      <h2>Películas</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Título</th>
+               <th>Duración</th>
+               <th>Género</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>A través de mi ventana</td>
+               <td>112 minutos</td>
+               <td>Romance</td>
+            </tr>
+            <tr>
+               <td>Vidas Pasadas</td>
+               <td>106 minutos</td>
+               <td>Romance</td>
+            </tr>
+            <tr>
+               <td>El Diario de la Princesa</td>
+               <td>115 minutos</td>
+               <td>Romance</td>
+            </tr>
+            <tr>
+               <td>La Propuesta</td>
+               <td>108 minutos</td>
+               <td>Romance</td>
+            </tr>
+            <tr>
+               <td>Bajo la Misma Estrella</td>
+               <td>128 minutos</td>
+               <td>Drama Literario</td>
+            </tr>
+            <tr>
+               <td>Mujercitas</td>
+               <td>135 minutos</td>
+               <td>Drama Literario</td>
+            </tr>
+            <tr>
+               <td>Yo antes de ti</td>
+               <td>120 minutos</td>
+               <td>Drama Literario</td>
+            </tr>
+            <tr>
+               <td>Orgullo y Prejuicio</td>
+               <td>130 minutos</td>
+               <td>Drama Literario</td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>Series</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Título</th>
+               <th>Duración</th>
+               <th>Género</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Élite</td>
+               <td>112 minutos</td>
+               <td>Drama Adolescente</td>
+            </tr>
+            <tr>
+               <td>Control Z</td>
+               <td>112 minutos</td>
+               <td>Drama Adolescente</td>
+            </tr>
+            <tr>
+               <td>Pretty Little Liars</td>
+               <td>160 capítulos</td>
+               <td>Drama Adolescente</td>
+            </tr>
+            <tr>
+               <td>Bridgerton</td>
+               <td>24 capítulos</td>
+               <td>Drama Adolescente</td>
+            </tr>
+            <tr>
+               <td>Friends</td>
+               <td>236 capítulos</td>
+               <td>Comedia</td>
+            </tr>
+            <tr>
+               <td>Gilmore Girls</td>
+               <td>153 capítulos</td>
+               <td>Comedia</td>
+            </tr>
+            <tr>
+               <td>How I Met Your Mother</td>
+               <td>208 capítulos</td>
+               <td>Comedia</td>
+            </tr>
+            <tr>
+               <td>Modern Family</td>
+               <td>237 capítulos</td>
+               <td>Comedia</td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>
