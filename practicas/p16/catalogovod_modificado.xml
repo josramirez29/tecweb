@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="catalogovod.xsl"?>
+<CatalogoVOD>
+    <cuenta correo="joselynrali705@gmail.com">
+        <perfiles>
+            <perfil usuario="Hannah" idioma="English"/>
+            <perfil usuario="Jos" idioma="Español"/>
+            <perfil usuario="Jean Luigi Pérez" idioma="french"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="ESP">
+            <genero nombre="Romance">
+                <titulo duracion="112 minutos">A través de mi ventana</titulo>
+            </genero>
+        </peliculas>
+        <peliculas region="KOR">
+            <genero nombre="Romance">
+                <titulo duracion="106 minutos">Vidas Pasadas</titulo>
+            </genero>
+        </peliculas>
+        <peliculas region="USA">
+            <genero nombre="Romance">
+                <titulo duracion="115 minutos">El Diario de la Princesa</titulo>
+                <titulo duracion="108 minutos">La Propuesta</titulo>
+            </genero>
+            <genero nombre="Drama Literario">
+                <titulo duracion="128 minutos">Bajo la Misma Estrella</titulo>
+                <titulo duracion="135 minutos">Mujercitas</titulo>
+                <titulo duracion="120 minutos">Yo antes de ti</titulo>
+                <titulo duracion="130 minutos">Orgullo y Prejuicio</titulo>
+            </genero>
+        </peliculas>
+        <series region="ESP">
+            <genero nombre="Drama Adolescente">
+                <titulo duracion="112 minutos">Élite</titulo>
+            </genero>
+        </series>
+        <series region="MEX">
+            <genero nombre="Drama Adolescente">
+                <titulo duracion="112 minutos">Control Z</titulo>
+            </genero>
+        </series>
+        <series region="USA">
+            <genero nombre="Drama Adolescente">
+                <titulo duracion="160 capítulos">Pretty Little Liars</titulo>
+                <titulo duracion="24 capítulos">Bridgerton</titulo>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo duracion="236 capítulos">Friends</titulo>
+                <titulo duracion="153 capítulos">Gilmore Girls</titulo>
+                <titulo duracion="208 capítulos">How I Met Your Mother</titulo>
+                <titulo duracion="237 capítulos">Modern Family</titulo>
+            </genero>
+        </series>
+        <peliculas region="USA">
+            <genero nombre="Live Action">
+                <titulo duracion="120 minutos">La Bella y la Bestia</titulo>
+                <titulo duracion="114 minutos">El Rey León</titulo>
+            </genero>
+        </peliculas>
+        <series region="USA">
+            <genero nombre="Misterio">
+                <titulo duracion="80 capítulos">Stranger Things</titulo>
+                <titulo duracion="50 capítulos">Riverdale</titulo>
+            </genero>
+        </series>
+    </contenido>
+</CatalogoVOD>

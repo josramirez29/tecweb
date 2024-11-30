@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        fieldset {
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        legend {
+            font-size: 1.3em;
+        }
+        label {
+            font-size: 1.2em;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #0f6186;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="reset"] {
+            background-color: #0f6186;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container {
+        text-align: center;
+        margin-top: 20px;
+        }
+        
+    </style>
+    <title>Servicio VOD</title>
+</head>
+<body>
+    <h1>Inserción de datos VOD</h1>
+    <form action="serviciovod_add.php" method="post">
+        <fieldset>
+            <legend>Información de Perfil</legend>
+    
+            <ul>
+                <li><label>Usuario:</label> <input type="text" name="usuario"></li>
+                <li><label>Idioma :</label>
+                    <select name="size" size="1">
+                        <option value="french">French</option>
+                        <option value="english">English</option>
+                        <option selected="selected" value="spanish">Spanish</option>
+                    </select>
+                </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Información de Contenido</legend>
+    
+            <fieldset>
+                <legend>Peliculas</legend>
+        
+                <ul>
+                    <li><label>Genero :</label> <input type="text" name="pel-genero"></li>
+                    <li>
+                        <label>Titulo 1:</label> <input type="text" name="pel-titulo1">
+                        <label>Duración:</label> <input type="text" name="pel-duracion1">
+                    </li>
+                    <li>
+                        <label>Titulo 2:</label> <input type="text" name="pel-titulo2">
+                        <label>Duración:</label> <input type="text" name="pel-duracion2">
+                    </li>
+                </ul>
+              </fieldset>
+
+              <fieldset>
+                <legend>Series</legend>
+        
+                <ul>
+                    <li><label>Genero :</label> <input type="text" name="ser-genero"></li>
+                    <li>
+                        <label>Titulo 1:</label> <input type="text" name="ser-titulo1">
+                        <label>Duración:</label> <input type="text" name="ser-duracion1">
+                    </li>
+                    <li>
+                        <label>Titulo 2:</label> <input type="text" name="ser-titulo2">
+                        <label>Duración:</label> <input type="text" name="ser-duracion2">
+                    </li>
+                </ul>
+              </fieldset>
+          </fieldset>
+
+          <div class="container">
+          <p>
+            <input type="submit" value="Agregar">
+            <input type="reset">
+          </p>
+        </div>
+    </form>
+</body>
+</html>
